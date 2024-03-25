@@ -70,6 +70,7 @@ document.addEventListener('keyup', (e) => {
         setTwo();
     }
     document.getElementById("score").innerText = score;
+    checkGameOver();
 })
 
 function filterZero(row){
@@ -181,6 +182,77 @@ function hasEmptyTile() {
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
             if (board[r][c] == 0) { //at least one zero in the board
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+function checkGameOver() {
+    if (checkWin()) {
+        alert("Congratulations! You've reached 2048! Final Score: " + score);
+        // You can add additional logic here to reset the game or perform any other actions.
+    } else if (!hasValidMoves() && !hasEmptyTile()) {
+        alert("Game Over! Final Score: " + score);
+        // You can add additional logic here to reset the game or perform any other actions.
+    }
+}
+
+function checkWin() {
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+            if (board[r][c] === 2048) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+
+function hasValidMoves() {
+    // Simulate each potential move and check if any of them result in a change in the board state
+    return canMoveLeft() || canMoveRight() || canMoveUp() || canMoveDown();
+}
+
+function canMoveLeft() {
+    for (let r = 0; r < rows; r++) {
+        for (let c = 1; c < columns; c++) {
+            if (board[r][c] !== 0 && (board[r][c - 1] === 0 || board[r][c - 1] === board[r][c])) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+function canMoveRight() {
+    for (let r = 0; r < rows; r++) {
+        for (let c = columns - 2; c >= 0; c--) {
+            if (board[r][c] !== 0 && (board[r][c + 1] === 0 || board[r][c + 1] === board[r][c])) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+function canMoveUp() {
+    for (let c = 0; c < columns; c++) {
+        for (let r = 1; r < rows; r++) {
+            if (board[r][c] !== 0 && (board[r - 1][c] === 0 || board[r - 1][c] === board[r][c])) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+function canMoveDown() {
+    for (let c = 0; c < columns; c++) {
+        for (let r = rows - 2; r >= 0; r--) {
+            if (board[r][c] !== 0 && (board[r + 1][c] === 0 || board[r + 1][c] === board[r][c])) {
                 return true;
             }
         }
