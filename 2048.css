@@ -16,6 +16,7 @@ hr {
     border: 5px solid greenyellow;
 
     margin: 0 auto;
+    /* These 2 lines give our tiles go inline */
     display: flex;
     flex-wrap: wrap;
 }
@@ -33,16 +34,16 @@ hr {
 }
 
 
-
+/* colored tiles */
 
 .x2 {
     background-color: #eee4da;
-    color: #727371;
+    color: white;
 }
 
 .x4 {
-    background-color: #ece0ca;
-    color: #727371;
+    background-color: #caecca;
+    color:white;
 }
 
 .x8 {
