@@ -1,4 +1,4 @@
-![Screenshot 2024-03-27 011954](https://github.com/Ashus25/2048-game/assets/135310216/5b1691ee-3128-46b4-ba11-b97913f9aa3e)# 2048 Game: HTML, CSS, and JavaScript
+# 2048 Game: HTML, CSS, and JavaScript
 
 The 2048 game is an addictive puzzle game where the objective is to combine numbered tiles on a grid to create a tile with a value of 2048. The game is played on a 4x4 grid, but variations with different grid sizes also exist.</ br>
 
