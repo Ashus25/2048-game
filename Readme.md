@@ -1,6 +1,6 @@
 # 2048 Game: HTML, CSS, and JavaScript
 
-The 2048 game is an addictive puzzle game where the objective is to combine numbered tiles on a grid to create a tile with a value of 2048. The game is played on a 4x4 grid, but variations with different grid sizes also exist.</ br>
+The 2048 game is an addictive puzzle game where the objective is to combine numbered tiles on a grid to create a tile with a value of 2048. The game is played on a 4x4 grid, but variations with different grid sizes also exist.
 
 ## How to Play
 * Objective: Combine tiles to reach the 2048 tile.
