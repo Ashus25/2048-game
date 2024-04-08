@@ -192,10 +192,8 @@ function hasEmptyTile() {
 function checkGameOver() {
     if (checkWin()) {
         alert("Congratulations! You've reached 2048! Final Score: " + score);
-        // You can add additional logic here to reset the game or perform any other actions.
     } else if (!hasValidMoves() && !hasEmptyTile()) {
         alert("Game Over! Final Score: " + score);
-        // You can add additional logic here to reset the game or perform any other actions.
     }
 }
 
